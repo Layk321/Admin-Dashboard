@@ -1,0 +1,178 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  * {
+    margin: 0;
+  }
+  
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  p {
+    text-wrap: pretty;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+  
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  /* End reset */
+
+  body {
+    font-family: "Roboto", system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  }
+
+  .page-layout-container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 4fr;
+    height: 100vh;
+  }
+
+
+
+
+  header {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    padding: 1em 1em;
+  }
+
+  input {
+    width: clamp(1em, 1000px, 50%);
+    background-color: #e2e8f0;
+    border-radius: 10px;
+    border: none;
+  }
+
+  .create-post-container button {
+    border-radius: 20px;
+    background-color: #1992d4;
+    color: white;
+    border: none;
+    font-size: 1em;
+    padding: 1ch 3ch;
+  }
+
+  
+
+
+  .sidebar {
+    grid-row: 1 / -1;
+    background-color: #1992d4;
+    color: white;
+    justify-items: left;
+    padding-left: 1em;
+  }
+
+  .sidebar h4 {
+    font-size: 2em;
+    margin-top: 0.5em;
+  }
+
+  .sidebar li {
+    margin: 0.5em;
+    font-size: 1.5em;
+    list-style-type: none;
+  }
+  
+  .sidebar :nth-child(7), li:first-of-type {
+    margin-top: 8ch;
+  }
+
+  .sidebar h4::before {
+    /* display: inline-block;
+    background: url(/icons/view-dashboard.svg) no-repeat 100% 0;
+    padding-left: 10px;
+    background-size: 10px 10px; */
+    content: url(/icons/view-dashboard.svg);
+    display: inline-block;
+    width: 1.5em;
+    
+    /* fill: #ff0000; */
+  }
+
+  img {
+    fill: white;
+  }
+
+  /* .nav-account {
+    :nth-child(1)::before {
+      content: url(icons/home.svg);
+    }
+    :nth-child(2)::before {
+      content: url(icons/account-details.svg);
+    }
+    :nth-child(3)::before {
+      content: url(icons/message.svg);
+    }
+    :nth-child(4)::before {
+      content: url(icons/clock.svg);
+    }
+  } */
+
+  /* li::before {
+    display: inline-block;
+    width: 1em;
+    fill: white;
+  } */
+
+
+
+
+  .content-container {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    background-color: #e2e8f0;
+    padding: 4em 1.5em;
+  }
+
+  .your-projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1em;
+  }
+
+  .your-projects h5 {
+    position: absolute;
+    /* top: 500px; */
+  }
+
+  .your-projects .card {
+    padding: 10px;
+  }
+
+
+
+
+  .card {
+    box-shadow: ;
+    background-color: white;
+    color: #808080;
+    border-radius: 10px;
+  }
