@@ -62,12 +62,44 @@
     padding: 1em 1em;
   }
 
+  .search-container * {
+    display: inline-flex;
+  }
+
   input {
     width: clamp(1em, 1000px, 50%);
     background-color: #e2e8f0;
     border-radius: 10px;
     border: none;
+    margin-left: 20px;
+    margin-right: 8em;
   }
+
+  .input-wrapper {
+    display: flex;
+    align-content: center;
+  }
+
+  .input-wrapper::before {
+    display: inline-block;
+    content: url(./icons/magnify.svg);
+    width: 2em;
+  }
+
+  .input-wrapper::after {
+    display: inline-block;
+    content: url(./icons/bell-ring-outline.svg);
+    width: 2em;
+  }
+
+  /* .input-wrapper::before {
+    content: '';
+    display: inline-block;
+    background: no-repeat url(./profile-icons/rabbit.png);
+    background-size: 50px 50px;
+    width: 50px;
+    height: 50px;
+  } */
 
   .create-post-container button {
     border-radius: 20px;
@@ -92,54 +124,68 @@
   .sidebar h4 {
     font-size: 2em;
     margin-top: 0.5em;
+    display: flex;
+    gap: 15px;
+  }
+
+  .sidebar ul {
+    padding: 0;
   }
 
   .sidebar li {
     margin: 0.5em;
-    font-size: 1.5em;
+    font-size: 1.6em;
+    font-weight: 700;
     list-style-type: none;
+    display: flex;
+    gap: 15px;
   }
   
   .sidebar :nth-child(7), li:first-of-type {
-    margin-top: 8ch;
+    margin-top: 4ch;
   }
 
   .sidebar h4::before {
-    /* display: inline-block;
-    background: url(/icons/view-dashboard.svg) no-repeat 100% 0;
-    padding-left: 10px;
-    background-size: 10px 10px; */
-    content: url(/icons/view-dashboard.svg);
+    content: url(.//icons/view-dashboard.svg);
     display: inline-block;
     width: 1.5em;
-    
-    /* fill: #ff0000; */
   }
 
-  img {
-    fill: white;
-  }
-
-  /* .nav-account {
+  .nav-account {
     :nth-child(1)::before {
-      content: url(icons/home.svg);
+      content: url(./icons/home.svg);
     }
     :nth-child(2)::before {
-      content: url(icons/account-details.svg);
+      content: url(./icons/account-details.svg);
     }
     :nth-child(3)::before {
-      content: url(icons/message.svg);
+      content: url(./icons/message.svg);
     }
     :nth-child(4)::before {
-      content: url(icons/clock.svg);
+      content: url(./icons/clock.svg);
     }
-  } */
+    :nth-child(5)::before {
+      content: url(./icons/note-multiple.svg);
+    }
+    :nth-child(6)::before {
+      content: url(./icons/account-group.svg);
+    }
+    :nth-child(7)::before {
+      content: url(./icons/cog.svg);
+    }
+    :nth-child(8)::before {
+      content: url(./icons/help-box.svg);
+    }
+    :nth-child(9)::before {
+      content: url(./icons/shield-check.svg);
+    }
+  }
 
-  /* li::before {
+  li::before {
     display: inline-block;
     width: 1em;
-    fill: white;
-  } */
+    padding-top: 3px;
+  }
 
 
 
@@ -149,6 +195,7 @@
     grid-template-columns: 4fr 1fr;
     background-color: #e2e8f0;
     padding: 4em 1.5em;
+    gap: 1em;
   }
 
   .your-projects {
@@ -158,13 +205,52 @@
     gap: 1em;
   }
 
-  .your-projects h5 {
+  /* .your-projects h5 {
     position: absolute;
-    /* top: 500px; */
-  }
+    top: -2.5em;
+  } */
 
   .your-projects .card {
     padding: 10px;
+    border-left: 20px solid orange;
+  }
+
+  .card-icons::after {
+    content: 
+    url(./icons/star-plus-outline.svg) 
+    url(./icons/eye-plus-outline.svg) 
+    url(./icons/share-variant-outline.svg);
+    display: inline-block;
+    white-space: nowrap;
+    width: 20px;
+  }
+  
+  /* .card-icons {
+    justify-self: right;
+  } */
+
+  .news-wrapper {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 1em;
+  }
+
+  .announcements .card {
+    padding: 10px;
+  }
+
+  .announcements .card div {
+    text-overflow: ellipsis;
+    padding: 10px;
+  }
+
+  .announcements, .your-projects, .trending {
+    position: relative;
+  }
+
+  h5 {
+    position: absolute;
+    top: -2.5em;
   }
 
 
@@ -175,4 +261,17 @@
     background-color: white;
     color: #808080;
     border-radius: 10px;
+  }
+
+  .card p {
+    color: black;
+    font-weight: 700;
+  }
+
+  .trending .card div * {
+    color: blue;
+  }
+
+  h5 {
+    font-size: 1.2em;
   }
