@@ -276,11 +276,7 @@
     gap: 4em;
   }
 
-  .announcements .card {
-    padding: 10px;
-  }
-
-  .announcements .card div {
+  .announcements .card, .announcements .card div {
     padding: 10px;
   }
 
@@ -326,46 +322,33 @@
     content: '';
     background: no-repeat url(./profile-icons/dog.png);
     background-size: 3em 3em;
-    display: inline-block;
-    width: 3em;
-    height: 3em;
-    position: absolute;
-    left: 15px;
   }
 
   .trending .card div:nth-child(2)::before {
     content: '';
     background: no-repeat url(./profile-icons/rabbit.png);
     background-size: 3em 3em;
-    display: inline-block;
-    width: 3em;
-    height: 3em;
-    position: absolute;
-    left: 15px;
   }
 
   .trending .card div:nth-child(3)::before {
     content: '';
     background: no-repeat url(./profile-icons/duck.png);
     background-size: 3em 3em;
-    display: inline-block;
-    width: 3em;
-    height: 3em;
-    position: absolute;
-    left: 15px;
   }
 
   .trending .card div:nth-child(4)::before {
     content: '';
     background: no-repeat url(./profile-icons/pig.png);
     background-size: 3em 3em;
+  }
+
+  .trending .card div::before {
+    position: absolute;
+    left: 15px;
     display: inline-block;
     width: 3em;
     height: 3em;
-    position: absolute;
-    left: 15px;
   }
-
 
 
 
